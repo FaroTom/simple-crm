@@ -1,18 +1,28 @@
 <div class="p-8">
+    <mat-progress-bar *ngIf="loading" class="progress-bar" mode="indeterminate"></mat-progress-bar>
     <h1 mat-dialog-title class="addUser-title">Add User</h1>
 
     <div mat-dialog-content>
 
         <mat-form-field appearance="fill">
             <mat-label>First & Last Name</mat-label>
-            <input [(ngModel)]="user.fullName" matInput placeholder="Placeholder">
+            <input [disabled]="loading" [(ngModel)]="user.fullName" matInput placeholder="Placeholder">
             <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
 
         <div>
             <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input [disabled]="loading" [(ngModel)]="user.email" matInput placeholder="Placeholder">
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        </div>
+
+
+        <div>
+            <mat-form-field appearance="fill">
                 <mat-label>Birthdate</mat-label>
-                <input [(ngModel)]="birthDate" matInput [matDatepicker]="picker">
+                <input [disabled]="loading" [(ngModel)]="birthDate" matInput [matDatepicker]="picker">
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -21,7 +31,7 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>Street & House No.</mat-label>
-                <input [(ngModel)]="user.street" matInput placeholder="Placeholder">
+                <input [disabled]="loading" [(ngModel)]="user.street" matInput placeholder="Placeholder">
                 <mat-icon matSuffix>home</mat-icon>
             </mat-form-field>
         </div>
@@ -29,7 +39,7 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>City</mat-label>
-                <input [(ngModel)]="user.city" matInput placeholder="Placeholder">
+                <input [disabled]="loading" [(ngModel)]="user.city" matInput placeholder="Placeholder">
                 <mat-icon matSuffix>location_city</mat-icon>
             </mat-form-field>
         </div>

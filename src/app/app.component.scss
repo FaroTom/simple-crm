@@ -11,13 +11,17 @@
 }
 
 .logo-container {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
     padding-left: 16px;
     padding-right: 16px;
-    min-height: 64px;
+    max-height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    img {
+        max-height: 64px;
+    }
 }
 
 ul {
@@ -41,6 +45,7 @@ li {
 }
 
 .router-container {
-    padding-left: 56px;
-    padding-top: 16px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
 }

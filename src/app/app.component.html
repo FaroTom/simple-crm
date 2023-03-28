@@ -1,7 +1,7 @@
 <mat-drawer-container class="mat-drawer-container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side" [opened]="true">
     <div class="logo-container">
-      PLATZHALTER LOGO
+      <img src="../assets/img/logo.png">
     </div>
 
     <ul>
@@ -13,7 +13,7 @@
   <div class="example-sidenav-content">
     <mat-toolbar color="primary">
       <mat-toolbar-row>
-        <mat-icon class="menu-icon" (click)="drawer.toggle()" fontIcon="menu"></mat-icon>
+        <mat-icon class="menu-icon mr-16" (click)="drawer.toggle()" fontIcon="menu"></mat-icon>
         <span>Simple CRM</span>
       </mat-toolbar-row>
     </mat-toolbar>
